@@ -1,0 +1,123 @@
+/* 在主页less文件里面导入base.less公共样式 */
+
+@import 'base.less';
+
+/* 导航区域 */
+
+#nav {
+    padding: 10px;
+    .mui-row {
+        >div {
+            >a {
+                display: block;
+                >img {
+                    width: 100px;
+                    height: 94px;
+                }
+            }
+        }
+    }
+}
+
+
+/* 广告区域 */
+
+#adv {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px solid #ccc;
+    >.mui-row {
+        .adv-left {
+            >.mui-row {
+                >div {
+                    >a {
+                        display: block;
+                        >img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .adv-right {
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+/* 品牌专区 */
+
+#brand {
+    padding: 0 10px;
+    .title {
+        display: block;
+        >img {
+            width: 100%;
+        }
+    }
+    .mui-row {
+        >div {
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+/* 运动专区  女士专区 男士专区*/
+
+#sport,
+#women,
+#man {
+    padding: 0 10px;
+    .title {
+        display: block;
+        >img {
+            width: 100%;
+        }
+    }
+    .mui-row {
+        >div {
+            padding: 0 5px;
+            .product {
+                box-shadow: 0px 0px 5px #ccc;
+                text-align: center;
+                padding-bottom: 10px;
+                margin-top: 10px;
+                .product-img {
+                    display: block;
+                    >img {
+                        width: 100%;
+                    }
+                }
+                .product-name {
+                    font-size: 14px;
+                    height: 28px;
+                    line-height: 14px;
+                    /* 只显示2行文字超出的隐藏 */
+                    overflow: hidden;
+                }
+                .product-price {
+                    font-size: 12px;
+                    >span {
+                        color: #f40;
+                    }
+                    >del {
+                        color: #ccc;
+                    }
+                }
+                .product-buy {}
+            }
+        }
+    }
+}

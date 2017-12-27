@@ -1,0 +1,70 @@
+/* base.less是用来写一些项目都需要的公共样式 */
+
+
+
+/* 定义乐淘主题色 */
+@main-color: #006699;
+
+img{
+	vertical-align: middle;
+}
+// 头部公共样式
+#header{
+	height: 45px;
+	background-color: @main-color;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	>h4{
+	line-height: 45px;
+	margin: 0;
+	}
+	.fa-search{
+		position: absolute;
+		right: 20px;
+		top: 14px;
+	}
+}
+
+// 主体内容公共样式
+html,body{
+	height: 100%;
+}
+#main{
+	height: 100px;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	height: 100%;
+	background-color: #fff;
+}
+
+// 底部公共样式
+#footer{
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: @main-color;
+	z-index: 999;
+	.mui-row{
+			>div{
+				a{
+					color: #fff;
+					text-align: center;
+					display: block;
+					font-size: 14px;
+					padding: 10px;
+					&::before{
+					display: block;
+					margin-bottom: 2px;
+					}
+					&.active{
+					color: orange;
+					}
+				}
+			}
+	}
+}

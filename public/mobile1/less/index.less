@@ -1,0 +1,87 @@
+@import 'base.less';
+/* 主页主体部分 */
+#main{
+	/* 轮播图区域 */
+	background-color: #fff;
+	#slide{
+
+	}
+	/* 导航区域 */
+	#nav{
+		padding: 0.3125rem;
+		.mui-row{
+			>div{
+				>a{
+					display: block;
+					>img{
+						width: 3.125rem;
+					}
+				}
+			}
+		}
+	}
+	/* 品牌专区 */
+	#brand-aria{
+		padding: 0.3125rem;
+		.brand-title{
+			display: block;
+			>img{
+				width: 100%;
+			}
+		}
+		.brand-body{
+			>div{
+				>a{
+					display: block;
+					>img{
+						width: 2.34375rem;
+						height: 1.21875rem;
+					}
+				}
+			}
+		}
+	}
+	/* 运动专区 女士专区 男士专区 */
+	#sport-aria,#women-aria,#man-aria{
+		padding: 0.3125rem;
+		.brand-title{
+			display: block;
+			>img{
+				width: 100%;
+			}
+		}
+		.mui-row{
+			>div{
+				padding: 0px 0.15625rem;
+				margin-top: 0.3125rem;
+				.product{
+					text-align: center;
+					box-shadow: 0 0 0.15625rem #ccc;
+					padding-bottom: 0.3125rem;
+					.product-img{
+						>img{
+							width: 4.375rem;
+							height: 4.375rem;
+						}
+					}
+					.product-name{
+						font-size: 0.4375rem;
+						line-height: 0.4375rem;
+					}
+					.product-price{
+						>span{
+							font-size: 0.375rem;
+							&:first-child{
+								color:#f40;
+							}
+							&:last-child{
+								color:#ccc;
+								text-decoration:line-through;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

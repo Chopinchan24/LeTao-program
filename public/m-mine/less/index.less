@@ -1,0 +1,116 @@
+// 导入公共样式
+
+@import 'base.less';
+// 导航栏
+#nav{
+    padding: 10px;
+   .mui-row{
+        >div{
+            >a{
+                display: block;
+                >img{
+                    width: 100px;
+                    height: 94px;
+                }
+            }
+        }
+   }
+}
+
+// 广告栏
+#section3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px solid #ccc;
+    >.mui-row{
+        .section3-left{
+           >.mui-row{
+                >div {
+                    >a {
+                        display: block;
+                        >img {
+                            width: 100%;
+                        }
+                    }
+                }
+           } 
+        }
+        .section3-right{
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+// 品牌专区
+
+#brand{
+    padding: 0px 10px;
+    .title{
+        display: block;
+        >img{
+            width: 100%;
+        }
+    }
+    .mui-row{
+        >div{
+            >a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+#sport,
+#women,
+#man{
+    margin-top: 5px;
+    padding: 0 10px;
+    .title{
+        display: block;
+        >img{
+            width: 100%;
+        }
+    }
+    .mui-row{
+        div{
+            padding: 0 5px;
+            .product{
+                box-shadow: 0 0 5px #ccc;
+                text-align: center;
+                padding-bottom: 10px;
+                margin-top: 10px;
+                .product-img{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .product-name{
+                    font-size: 14px;
+                    height: 30px;
+                    line-height: 15px;
+                    overflow: hidden;
+                }
+                .product-price{
+                    >span{
+                        color:#d40;
+                    }
+                    del{
+                        color: #ccc;
+                    }
+                }
+                .product-buy{
+
+                }
+            }
+        }
+    }
+}
