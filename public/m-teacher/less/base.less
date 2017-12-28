@@ -1,75 +1,119 @@
 /* base.less是用来写一些项目都需要的公共样式 */
 
 
-
 /* 定义乐淘主题色 */
-@main-color:#006699;
 
-img{
-	/* 解决图片3px的间隙 */
-	vertical-align: middle;
+@main-color: #006699;
+img {
+    /* 解决图片3px的间隙 */
+    vertical-align: middle;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+}
+li{
+	/* 去掉小圆点 */
+	list-style: none;
+}
+a{
+	color:#666;
 }
 
 /* 头部区域的公共样式 */
 
-#header{
-	height: 45px;
-	background-color: @main-color;
-	color:#fff;
-	text-align: center;
-	position: fixed;
-	width: 100%;
-	z-index: 999;
-	>h4{
-		line-height: 45px;
-		font-weight: normal;
-		margin:0;
-	}
-	.fa-search{
-		color:#fff;
-		position: absolute;
-		top: 14px;
-		right: 20px;
-	}
+#header {
+    height: 45px;
+    background-color: @main-color;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    >h4 {
+        line-height: 45px;
+        font-weight: normal;
+        margin: 0;
+    }
+    .fa-search {
+        color: #fff;
+        position: absolute;
+        top: 14px;
+        right: 10px;
+    }
+    .fa-arrow-left{
+    	position: absolute;
+    	left: 10px;
+    	top: 14px;
+    	color:#fff;
+    }
+    form{
+    	padding-left: 35px;
+    	padding-right: 35px;
+    	>input{
+    		width: 100%;
+    		background-color: #fff;
+    		height: 30px;
+    		margin-top: 7px;
+    		font-size: 14px;
+    		text-align: left;
+    		color:#000;
+    	}
+    }
 }
+
 
 /* 底部的公共样式 */
-#footer{
-	position: fixed;
-	width: 100%;
-	left: 0px;
-	bottom: 0px;
-	height: 50px;
-	background-color: @main-color;
-	z-index: 999;
-	.mui-row{
-		>div{
-			>a{
-				color:#fff;
-				font-size: 14px;
-				display: block;
-				text-align: center;
-				padding: 11px;
-				&::before{
-					display: block;
-				}
-				&.active{
-					color:orange;
-				}
-			}
-		}
-	}
+
+#footer {
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    height: 50px;
+    background-color: @main-color;
+    z-index: 999;
+    .mui-row {
+        >div {
+            >a {
+                color: #fff;
+                font-size: 14px;
+                display: block;
+                text-align: center;
+                padding: 11px;
+                &::before {
+                    display: block;
+                }
+                &.active {
+                    color: orange;
+                }
+            }
+        }
+    }
 }
 
-
-html,body{
-	height: 100%;
+html,
+body {
+    height: 100%;
 }
+
 
 /* 主体内容的公共样式 */
-#main{
-	padding-top: 45px;
-	padding-bottom: 50px;
-	height: 100%;
-	background-color: #fff;
+
+#main {
+    padding-top: 45px;
+    padding-bottom: 50px;
+    height: 100%;
+    background-color: #fff;
+}
+
+
+/* 字体图标的公共样式 */
+/* 属性选择器 选中类名以fa-开头的类名 和 中间包含空格fa-类名的标签 */
+[class^="fa-"],[class*=" fa-"] {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 }

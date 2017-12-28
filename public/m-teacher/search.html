@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的乐淘搜索页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/search.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 固定在顶部 -->
+    <header id="header">
+        <a href="#" class="fa-arrow-left"></a>
+        <h4>我的乐淘搜索</h4>
+    </header>
+    <!-- 搜索主体 -->
+    <main id="main">
+        <!-- 搜索的表单 -->
+        <div class="search-form">
+            <input type="search" placeholder="请输入要搜索的商品" class="search-input">
+            <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+        </div>
+        <!-- 搜索的历史容器 -->
+        <div class="search-history">
+            <div class="search-history-heading mui-clearfix">
+                <span>搜索历史</span>
+                <span class="fa-trash btn-clear">清空记录</span>
+            </div>
+            <div class="search-history-list">
+                <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">
+                        <a href="#">
+                       	 手机
+                        <i class="fa-close"></i>
+                       </a>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <a href="#">
+                       	 鞋
+                        <i class="fa-close"></i>
+                       </a>
+                    </li>
+                    <li class="mui-table-view-cell">
+                        <a href="#">
+                       	 内衣
+                        <i class="fa-close"></i>
+                       </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- 底部区域 固定在底部 -->
+    <footer id="footer">
+        <!-- mui-row没有左右-15px 的margin所以不需要放到容器 -->
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="fa fa-home active">
+    				首页
+    			</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="fa fa-bars">
+    				分类
+    			</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="cart.html" class="fa fa-shopping-cart">
+    				购物车
+    			</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html" class="fa fa-user">
+    				个人中心
+    			</a>
+            </div>
+        </div>
+    </footer>
+    <!-- 定义搜索历史记录模板 -->
+   <!--  {
+        rows:[
+            '鞋',
+            '内衣'
+        ]
+    } -->
+    <script id="searchHistoryTmp" type="text/html">
+    {{each rows as value i}}
+         <li class="mui-table-view-cell">
+            <a href="#" data-history="{{value}}">
+             {{value}}
+            <i class="fa-close btn-delete"></i>
+           </a>
+        </li>
+    {{/each}}
+    </script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

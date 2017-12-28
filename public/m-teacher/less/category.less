@@ -1,0 +1,97 @@
+/* 1. 在分类的less里面导入base.less */
+
+@import 'base.less';
+
+/* 分类的主体 */
+
+#main {
+    /* 左侧分类菜单 */
+    background-color: #eee;
+    .category-left {
+        float: left;
+        >ul {
+            >li {
+                >a {
+                    width: 80px;
+                    height: 40px;
+                    display: block;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                    line-height: 40px;
+                    text-align: center;
+                    font-size: 14px;
+                }
+                &.active {
+                    >a {
+                        background-color: #ccc;
+                        color: @main-color;
+                    }
+                }
+            }
+        }
+    }
+    /* 右侧分类的商品 解决方案1 */
+    .category-right {
+        overflow: hidden;
+        padding: 10px;
+        //父容器由于mui加了绝对定位 宽度加了100% 不能设置宽度100% 设置宽度为自动（标准流子元素撑开）
+        width: auto;
+        //定了脱标不会过右边来 设置margin-left 或者left到右边去
+        left: 80px;
+        //定位脱标 不会受到父容器的padding-top 加一个top45
+        top: 45px;
+        //定位脱标 不会受到父容器的Padding-bottom的影响 加一个bottom50px
+        bottom: 50px;
+        .mui-scroll {
+            //子元素在mui里面也加了绝对定位 （但是子元素的不需要脱标 设置为相对定位）
+            position: relative;
+            .mui-row {
+                background-color: #fff;
+                >div {
+                    >a {
+                        display: block;
+                        text-align: center;
+                        >img {
+                            width: 100%;
+                        }
+                        >p {
+                            font-size: 12px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* .category-right {
+        overflow: hidden;
+        padding: 10px;
+        height: 100%;
+        给右侧分类加一个相对定位 让里面的区域滚动的父容器相对右边来定位
+        position: relative;
+        .mui-scroll-wrapper {
+            left: 10px;
+            top: 10px;
+            right: 10px;
+            width: auto;
+            .mui-scroll {
+                .mui-row {
+                    background-color: #fff;
+                    >div {
+                        >a {
+                            display: block;
+                            text-align: center;
+                            >img {
+                                width: 100%;
+                            }
+                            >p {
+                                font-size: 12px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } */
+}

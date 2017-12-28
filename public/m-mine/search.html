@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>搜索中心Chopin</title>
+        <meta charset="utf-8">
+        <!-- 移动端视口 -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <!-- 引入框架css -->
+        <link rel="stylesheet" href="lib/mui/css/mui.css">
+        <!-- 项目所需要的字体图标 -->
+        <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+        <!-- 自写的样式less文件及less编译器 -->
+        <link rel="stylesheet/less" href="less/search.less">
+        <script src="lib/less/less.js"></script>
+    </head>
+    <body>
+    <!-- 头部区域 -->
+      <header id="header">
+                <a href="#" class="fa fa-arrow-left" aria-hidden="true"></a>
+                <h4>搜索中心</h4>
+        </header>
+    <!-- 头部区域 -->
+    <!-- 主体区域 -->
+        <main id="main">
+          <!-- 搜索框 -->
+          <div class="search-form mui-clearfix">
+            <input type="search" placeholder="请输入您要搜索的商品" class="search-input">
+            <button type="button" class="nui-btn mui-btn-primary btn-search">搜索</button>
+          </div>
+          <!-- 搜索历史列表 -->
+          <div class="search-history">
+            <div class="search-history-heading mui-clearfix">
+              <span>搜索历史</span>
+              <span class="fa fa-trash btn-clear">清空记录</span>
+            </div>
+            <div class="search-history-list">
+              <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                  <a href="#">Item 1
+                  <i class="fa fa-close"></i></a>
+                </li>
+                <li class="mui-table-view-cell">
+                  <a href="#">Item 2
+                  <i class="fa fa-close"></i></a>
+                </li>
+                <li class="mui-table-view-cell">
+                  <a href="#">Item 3
+                  <i class="fa fa-close"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+    <!-- 主体区域 -->
+    <!-- 底部区域 -->
+     <footer id="footer">
+          <div class="mui-row">
+              <div class="mui-col-xs-3">
+                  <a href="index.html" class="icon_search fa fa-home active">
+                      首页
+                  </a>
+              </div>
+              <div class="mui-col-xs-3">
+                  <a href="category.html"  class="tab_cate fa fa-bars">
+                      分类
+                  </a>
+              </div>
+              <div class="mui-col-xs-3">
+                  <a href="#" class="tab_cart fa fa-shopping-cart">
+                      购物车
+                  </a>
+              </div>
+              <div class="mui-col-xs-3">
+                  <a href="#"  class="tab_user fa fa-user">
+                      会员中心
+                  </a>
+              </div>
+          </div>
+      </footer>
+    <!-- 底部区域 -->
+    <script id="searchHistoryTmp" type="text/html">
+        {{each rows as value i}}
+        <li class="mui-table-view-cell">
+                  <a href="#" data-history='{{value}}'>{{value}}
+                  <i class="fa fa-close btn-delete"></i>
+                  </a>
+        </li>
+        {{/each}}
+    </script>
+
+        <!-- 先引入zepto库 移动端类似于jquery库-->
+        <script src="lib/zepto/zepto.min.js"></script>
+        <!-- 框架js文件 -->
+        <script src="lib/mui/js/mui.min.js"></script>
+        <!-- 模板js文件 -->
+        <script src="lib/artTemplate/template.js"></script>
+        <!-- 自写的js文件 -->
+        <script src="js/search.js"></script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的乐淘分类页</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 1. 引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标的css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入分类的less文件 -->
+    <link rel="stylesheet/less" href="less/category.less">
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 固定在顶部 -->
+    <header id="header">
+        <a href="#" class="fa-arrow-left"></a>
+        <form action="#">
+            <input type="search" placeholder="请输入要搜索的商品">
+        </form>
+        <a href="#" class="fa-search"></a>
+    </header>
+    <!-- 分类的主体 -->
+    <main id="main">
+        <!-- 左侧分类菜单 -->
+        <div class="category-left">
+            <ul>
+
+                <li class="active"><a href="#">运动馆1</a></li>
+                <li><a href="#">运动馆2</a></li>
+                <li><a href="#">运动馆3</a></li>
+                <li><a href="#">运动馆4</a></li>
+                <li><a href="#">运动馆5</a></li>
+            </ul>
+        </div>
+        <!-- 分类右侧商品 -->
+        <!-- mui-scroll-wrapper给分类右侧父容器添加的类名 -->
+        <div class="category-right mui-scroll-wrapper">
+            <!-- 给所有的分类商品添加一个子容器把所有商品包起来 添加mui-scroll -->
+            <div class="mui-scroll">
+              
+            </div>
+        </div>
+    </main>
+    <!-- 底部区域 固定在底部 -->
+    <footer id="footer">
+        <!-- mui-row没有左右-15px 的margin所以不需要放到容器 -->
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="fa fa-home active">
+    				首页
+    			</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="fa fa-bars">
+    				分类
+    			</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="cart.html" class="fa fa-shopping-cart">
+    				购物车
+    			</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html" class="fa fa-user">
+    				个人中心
+    			</a>
+            </div>
+        </div>
+    </footer>
+    <!-- 定义一个左侧分类的模板 -->
+    <!-- cateogoryLeftTmp 模板id通常后面跟一个Tmp 指定模板的类名 text/html -->
+    <!-- each 数组名 as value i  value就是每次循环的对象 $value是模板引擎默认的循环对象  i循环的索引-->
+    <script id="categoryLeftTmp" type="text/html">
+        {{each rows as value i}}
+        <li>
+            <a href="#" data-id="{{value.id}}">
+                {{value.categoryName}}
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 定义右侧分类的模板 -->
+    <script id="categoryRightTmp" type="text/html">
+        <p>热门分类</p>
+        <div class="mui-row">
+            {{each rows as value i}}
+            <div class="mui-col-xs-4">
+                <a href="#">
+                    <img src="{{value.brandLogo}}" alt="">
+                    <p>{{value.brandName}}</p>
+                </a>
+            </div>
+        {{/each}}
+        </div>        
+    </script>
+    <!-- 5. 引入zepto的js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 6. 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 7. 引入模板引擎的JS文件 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <!-- 8. 引入分类的JS文件 -->
+    <script src="js/category.js"></script>
+</body>
+
+</html>

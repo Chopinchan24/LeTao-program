@@ -1,0 +1,62 @@
+@import 'base.less';
+
+/* 搜索主体 */
+
+#main {
+    .search-form {
+        padding: 10px;
+        position: relative;
+        padding-right: 70px;
+        >input {
+            height: 30px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid @main-color;
+            text-align: left;
+            margin-bottom: 0px;
+            border-radius: 5px 0px 0px 5px;
+            font-size: 14px;
+        }
+        >button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 60px;
+            height: 30px;
+            background-color: @main-color;
+            border-color: @main-color;
+            border-radius: 0px 5px 5px 0px;
+        }
+    }
+    .search-history {
+    	padding: 10px;
+        .search-history-heading {
+            >span {
+            	font-size: 14px;
+                &:first-child {
+                    float: left;
+                }
+                &:last-child{
+                	float: right;
+                }
+            }
+        }
+        .search-history-list{
+        	margin-top: 10px;
+        		>ul{
+        			border-left: 1px solid #ccc;
+        			border-right: 1px solid #ccc;
+        			>li{
+
+        				>a{
+        					display: block;
+        					font-size: 14px;
+        					>i{
+        						float: right;
+        					}
+        				}
+        			}
+        		}
+        }
+    }
+}

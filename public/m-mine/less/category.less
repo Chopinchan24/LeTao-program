@@ -1,0 +1,75 @@
+// 导入公共样式
+
+@import "base.less";
+
+#main{
+  background-color: #ddd;
+  .category-left{
+    float: left;
+    > ul {
+      > li{
+        > a{
+            width: 80px;
+            height: 40px;
+            display: block;
+            line-height: 40px;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            background-color: #fff;
+        }
+        &.active{
+          > a{
+            background-color: #ddd;
+            color: @main-color;
+          }
+        }
+      }
+    }
+  }
+  .category-right{
+    overflow: hidden;
+    padding: 10px;
+    width: auto;
+    // mui给这个父盒子给了自动的宽度和绝对定位，100%但是这里的父盒子的宽度给自动宽度，由标准流的子盒子撑开，所以改回auto
+    left: 80px;
+    top: 45px;
+    bottom: 50px;
+      .mui-scroll{
+        // 子元素在mui里面也是绝对定位，脱标了，所以需要设置相对定位或者绝对定位，占据标准流的位置
+        position: static;
+        height: 455px;
+         > p {
+              font-size: 18px;
+              height: 24px;
+              line-height: 24px;
+              width: 100%;  
+              text-align: center;
+              color: @main-color;
+              background-color: #fff;
+             }
+          .mui-row{
+            /*
+            margin-top: 50px;
+            margin-left: 90px;
+            margin-right: 10px;
+            margin-bottom: 50px;
+            */
+           background-color: #fff;
+
+             > div {
+              a{
+                display: block;
+                img{
+                    width: 100%;
+                }
+                p{
+                  font-size: 12px;
+                  text-align:center;
+                }
+              }
+             }
+          }
+      }
+  }
+}
